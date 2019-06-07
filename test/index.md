@@ -13,3 +13,9 @@ Within codeblock:
 !!!include(include.md)!!!
 ```
 
+---
+
+From subfolder:
+
+!!!include(subfolder/test.md)!!!
+

@@ -1,8 +1,8 @@
 {
   "name": "vscode-markdown-preview-include",
   "displayName": "Markdown Preview Include Support",
-  "description": "Visual Studio Code Extension for Markdown Preview to support including of other files with !!!include(file.md)!!!",
-  "version": "0.0.1",
+  "description": "Extension for Markdown Preview: support !!!include(file.md)!!!",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.34.0"
   },
