@@ -1,0 +1,24 @@
+{
+  "name": "vscode-markdown-preview-include",
+  "version": "0.0.1",
+  "description": "Visual Studio Code Extension for Markdown Preview to support including of other files with !!!include(file.md)!!!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SIPS1980/vscode-markdown-preview-include.git"
+  },
+  "keywords": [
+    "vscode"
+  ],
+  "icon": "logo128.png",
+  "author": "Markus Stamminger",
+  "publisher": "Markus Stamminger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SIPS1980/vscode-markdown-preview-include/issues"
+  },
+  "homepage": "https://github.com/SIPS1980/vscode-markdown-preview-include#readme"
+}
