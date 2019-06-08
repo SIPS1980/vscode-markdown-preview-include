@@ -2,7 +2,7 @@
   "name": "vscode-markdown-preview-include",
   "displayName": "Markdown Preview Include Files",
   "description": "Support transclusion of files wihin Markdown Preview",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.30.0"
   },
@@ -38,7 +38,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "package": "vsce",
+    "package": "vsce package --out ./publish",
     "package:list": "vsce ls"
   },
   "dependencies": {},

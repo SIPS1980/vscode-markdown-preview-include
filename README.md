@@ -1,9 +1,9 @@
 # Support transclusion of files wihin Markdown Preview
 
-[![Version](http://vsmarketplacebadge.apphb.com/version/stamminger.vscode-markdown-preview-include.svg)](https://marketplace.visualstudio.com/items?itemName=stamminger.vscode-markdown-preview-include)
-[![Installs](http://vsmarketplacebadge.apphb.com/installs/stamminger.vscode-markdown-preview-include.svg)](https://marketplace.visualstudio.com/items?itemName=stamminger.vscode-markdown-preview-include)
-[![Downloads](http://vsmarketplacebadge.apphb.com/downloads/stamminger.vscode-markdown-preview-include.svg)](https://marketplace.visualstudio.com/items?itemName=stamminger.vscode-markdown-preview-include)
-[![Rating](http://vsmarketplacebadge.apphb.com/rating-short/stamminger.vscode-markdown-preview-include.svg)](https://marketplace.visualstudio.com/items?itemName=stamminger.vscode-markdown-preview-include)
+[![Version](https://vsmarketplacebadge.apphb.com/version/stamminger.vscode-markdown-preview-include.svg)](https://marketplace.visualstudio.com/items?itemName=stamminger.vscode-markdown-preview-include)
+[![Installs](https://vsmarketplacebadge.apphb.com/installs/stamminger.vscode-markdown-preview-include.svg)](https://marketplace.visualstudio.com/items?itemName=stamminger.vscode-markdown-preview-include)
+[![Downloads](https://vsmarketplacebadge.apphb.com/downloads/stamminger.vscode-markdown-preview-include.svg)](https://marketplace.visualstudio.com/items?itemName=stamminger.vscode-markdown-preview-include)
+[![Rating](https://vsmarketplacebadge.apphb.com/rating-short/stamminger.vscode-markdown-preview-include.svg)](https://marketplace.visualstudio.com/items?itemName=stamminger.vscode-markdown-preview-include)
 
 Visual Studio Code Extension for the built-in Markdown Preview to support transculsion of further files.
 
