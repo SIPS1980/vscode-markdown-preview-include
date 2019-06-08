@@ -1,4 +1,4 @@
-# Support transclusion of files wihin Markdown Preview
+# Support transclusion of files within Markdown Preview
 
 [![Version](https://vsmarketplacebadge.apphb.com/version/stamminger.vscode-markdown-preview-include.svg)](https://marketplace.visualstudio.com/items?itemName=stamminger.vscode-markdown-preview-include)
 [![Installs](https://vsmarketplacebadge.apphb.com/installs/stamminger.vscode-markdown-preview-include.svg)](https://marketplace.visualstudio.com/items?itemName=stamminger.vscode-markdown-preview-include)
@@ -9,48 +9,75 @@ Visual Studio Code Extension for the built-in Markdown Preview to support transc
 
 ---
 
-The following 2 syntaxes are supported and can be used at anytime:
+The following 2 syntaxes are supported and can be used at anytime
 
-## Syntax based on [suggestion](https://talk.commonmark.org/t/transclusion-or-including-sub-documents-for-reuse/270/8) for [CommonMark.org](https://commonmark.org/)
+> **`:(file.md)`**
 
-```markdown
-:[Alternative Text when file.md was not found](file.md)
-```
+> **`!!!include(file.md)!!!`**
 
-* Output for circulare reference: `Circular reference between 'pathToFile/file.md' and 'pathToParentFile/partent.md'`
+* Output when referenced file is not found: *`File 'pathToFile/file.md' not found`*
+* Output for circular reference: *`Circular reference between 'pathToFile/file.md' and 'pathToParentFile/partent.md'`*
 
-### Syntax to use default alternative text's when either the file is not found or if there is a circular reference
+---
 
-```markdown
-:(file.md)
-```
+**Content**
 
-* Output when file is not found: `File 'pathToFile/file.md' not found`
-* Output for circulare reference: `Circular reference between 'pathToFile/file.md' and 'pathToParentFile/partent.md'`
+- [**Examples**](#examples)
+  - [Example for syntax based on proposal for CommonMark.org](#example-for-syntax-based-on-proposal-for-commonmarkorg)
+  - [Example for syntax from Markdown-It-Include plugin](#example-for-syntax-from-markdown-it-include-plugin)
+- [**Options**](#options)
+  - [Provide alternative text when file cannot be found](#provide-alternative-text-when-file-cannot-be-found)
+  - [Provide alternative text for circular reference](#provide-alternative-text-for-circular-reference)
+  - [Omit output if file cannot be found or if there is a circular reference](#omit-output-if-file-cannot-be-found-or-if-there-is-a-circular-reference)
+- [**Use Cases**](#use-cases)
+  - [Include copyright on multiple markdown files](#include-copyright-on-multiple-markdown-files)
+  - [Include file containing important links and reference them](#include-file-containing-important-links-and-reference-them)
+  - [Multiple editors working on a large document](#multiple-editors-working-on-a-large-document)
+- [**Credits**](#credits)
 
-### Include file names in alternative text
+---
 
-Optionally using an `|` after the alterntive text for when the file is not found allows changing the alternative text for the circular reference
+## **Examples**
 
-```markdown
-:[Did not find '{{FILE}}'|'{{FILE}}'<>'{{PARENT}}'](file.md)
-```
+### Example for syntax based on proposal for CommonMark.org
 
-* Output, if the file is not found: `Did not find 'pathToFile/file.md'`
-* Output, if there is a circulare reference: `'pathToFile/file.md'<>'pathToParentFile/partent.md'`
+![`:(file.md)`](examples/syntaxCommonMarkProposal.png)
 
-### Omit any output if the file is not found and / or if there is a circular reference
+### Example for syntax from Markdown-It-Include plugin
 
-```markdown
-:[](file.md)
-:[|](file.md)
-```
+![`:(file.md)`](examples/syntaxMarkdownItImplementation.png)
 
-## Syntax from [Markdown-It-Include](https://github.com/camelaissani/markdown-it-include) project
+---
 
-```markdown
-!!!include(file.md)!!!
-```
+## **Options**
+
+### Provide alternative text when file cannot be found
+
+> **`:[Alternative Text](file.md)`**
+
+* To include file name in output use: *`{{FILE}}`*\
+  E.g. **`:[Alternative Text for {{FILE}}](file.md)`**
+
+![`:(file.md)`](examples/syntaxNotFound.png)
+
+
+### Provide alternative text for circular reference
+
+> **`:[|Alternative Text](file.md)`**
+
+* To include file name in parent: *`{{PARENT}}`*\
+  E.g. **`:[|Alternative Circular Text with {{PARENT}}](file.md)`**
+
+* To include file name in child use: *`{{FILE}}`*\
+  E.g. **`:[|Alternative Circular Text with {{FILE}}](file.md)`**
+
+![`:(file.md)`](examples/syntaxCircularAlternative.png)
+
+### Omit output if file cannot be found or if there is a circular reference
+
+> **`:[](file.md)`**
+
+![`:(file.md)`](examples/syntaxOmitOutput.png)
 
 ---
 
@@ -64,7 +91,7 @@ Content of file `copyright.md` with copyright notice in includes folder
 Copyright &copy; 2019 Company Name - All rights reserved
 ```
 
-Files referecing `copyright.md` in includes folder
+Files referencing `copyright.md` in includes folder
 
 ```markdown
 Text with information
@@ -72,7 +99,7 @@ Text with information
 :[Copyright Notice][includes/copyright.md]
 ```
 
-This will produce the follwoing output
+This will produce the following output
 
 > Text with information
 >
@@ -95,7 +122,7 @@ Include `links.md` in the top of the file where links shall be referenced and us
 This is a link to [Github][GITHUB]
 ```
 
-This will produce the follwoing output
+This will produce the following output
 
 > This is a link to <a href="https://github.com">Github</a>
 
@@ -134,7 +161,7 @@ Bringing it all together
 :[Copyright Notice][includes/copyright.md]
 ```
 
-This will produce the follwoing output
+This will produce the following output
 
 > # Document Title
 >
