@@ -1,25 +1,33 @@
 {
   "name": "vscode-markdown-preview-include",
-  "displayName": "Markdown Preview Include Support",
-  "description": "Extension for Markdown Preview: support !!!include(file.md)!!!",
+  "displayName": "Markdown Preview Include Files",
+  "description": "Support transclusion of files wihin Markdown Preview",
   "version": "0.0.2",
   "engines": {
-    "vscode": "^1.34.0"
+    "vscode": "^1.30.0"
   },
   "main": "index.js",
   "keywords": [
     "vscode",
     "markdown",
-    "include"
+    "include",
+    "including",
+    "included",
+    "embedding",
+    "embedded",
+    "transclusion"
+  ],
+  "categories": [
+    "Other"
   ],
   "icon": "logo128.png",
   "author": "Markus Stamminger",
   "publisher": "stamminger",
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE.txt",
   "homepage": "https://github.com/SIPS1980/vscode-markdown-preview-include#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SIPS1980/vscode-markdown-preview-include.git"
+    "url": "https://github.com/SIPS1980/vscode-markdown-preview-include.git"
   },
   "bugs": {
     "url": "https://github.com/SIPS1980/vscode-markdown-preview-include/issues"
@@ -28,10 +36,18 @@
   "contributes": {
     "markdown.markdownItPlugins": true
   },
-  "dependencies": {
-    "markdown-it-include": "^1.1.0"
+  "scripts": {
+    "build": "tsc",
+    "package": "vsce",
+    "package:list": "vsce ls"
   },
+  "dependencies": {},
   "devDependencies": {
+    "@types/markdown-it": "0.0.7",
+    "@types/node": "^12.0.7",
+    "@types/vscode": "^1.35.0",
+    "markdown-it": "^8.4.2",
+    "typescript": "^3.5.1",
     "vscode": "^1.1.34"
   }
 }
